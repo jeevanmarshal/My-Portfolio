@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JeevanMarshal | Full Stack & Android Developer</title>
+  <meta name="description"
+    content="Portfolio of JeevanMarshal — a passionate full-stack and Android developer with expertise in Java, Kotlin, JSP, Node.js, and AI-driven applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Animated background particles -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">/</span><span class="logo-bracket">&gt;</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" id="nav-about" class="nav-link">About</a></li>
+        <li><a href="#skills" id="nav-skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" id="nav-projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" id="nav-contact" class="nav-link">Contact</a></li>
+        <li>
+          <a href="resume.pdf" id="nav-resume" class="btn-resume" download>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Resume
+          </a>
+        </li>
+      </ul>
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <ul>
+      <li><a href="#about" class="mobile-link" id="mob-about">About</a></li>
+      <li><a href="#skills" class="mobile-link" id="mob-skills">Skills</a></li>
+      <li><a href="#projects" class="mobile-link" id="mob-projects">Projects</a></li>
+      <li><a href="#contact" class="mobile-link" id="mob-contact">Contact</a></li>
+      <li><a href="resume.pdf" class="mobile-link" id="mob-resume" download>Download Resume</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero section-full">
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="pulse-dot"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">JeevanMarshal</span>
+      </h1>
+      <div class="hero-subtitle-wrapper" id="typewriter-wrapper">
+        <span class="hero-subtitle-static">I build </span>
+        <span class="typewriter" id="typewriter-text"></span>
+        <span class="typewriter-cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        A passionate <strong>Full Stack & Android Developer</strong> who crafts intelligent,
+        scalable applications — from AI-powered backends to native mobile experiences.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary" id="hero-projects-btn">
+          View My Work
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14" />
+            <path d="m12 5 7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#contact" class="btn-outline" id="hero-contact-btn">Get In Touch</a>
+      </div>
+      <div class="hero-stats" id="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-count="4">0</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="8">0</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="1">0</span>
+          <span class="stat-label">Year Exp.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="avatar-container" id="hero-avatar">
+        <div class="avatar-ring ring-1"></div>
+        <div class="avatar-ring ring-2"></div>
+        <div class="avatar-ring ring-3"></div>
+        <div class="avatar-core">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
+            <circle cx="100" cy="80" r="40" fill="url(#avatarGrad)" />
+            <ellipse cx="100" cy="155" rx="55" ry="35" fill="url(#avatarGrad)" />
+            <defs>
+              <radialGradient id="avatarGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#a78bfa" />
+                <stop offset="100%" stop-color="#6d28d9" />
+              </radialGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="floating-chip chip-1">
+          <span>☕</span> Java
+        </div>
+        <div class="floating-chip chip-2">
+          <span>🤖</span> Kotlin
+        </div>
+        <div class="floating-chip chip-3">
+          <span>🟢</span> Node.js
+        </div>
+        <div class="floating-chip chip-4">
+          <span>🗄️</span> MySQL
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" id="scroll-indicator" aria-label="Scroll down">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll down</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" id="about-text">
+          <p>
+            I'm a dedicated developer with a strong foundation in building <strong>full-stack web applications</strong>
+            and <strong>native Android apps</strong>.
+            I love solving real-world problems through code, especially at the intersection of <strong>AI, data mining,
+              and user experience</strong>.
+          </p>
+          <p>
+            My journey has taken me from designing recommendation systems with <strong>Apriori algorithms</strong>, to
+            building productivity apps that help users
+            maintain focus using <strong>Android's accessibility services</strong>, to creating image processing
+            pipelines on the backend.
+          </p>
+          <p>
+            I'm always learning, always building, and always looking for the next challenge that pushes my skills
+            forward.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight-item" id="highlight-1">
+              <div class="highlight-icon">🎓</div>
+              <div>
+                <strong>Education</strong>
+                <span>Computer Science / IT</span>
+              </div>
+            </div>
+            <div class="highlight-item" id="highlight-2">
+              <div class="highlight-icon">📍</div>
+              <div>
+                <strong>Location</strong>
+                <span>India</span>
+              </div>
+            </div>
+            <div class="highlight-item" id="highlight-3">
+              <div class="highlight-icon">💼</div>
+              <div>
+                <strong>Focus</strong>
+                <span>Full Stack & Mobile Dev</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-stack" aria-hidden="true">
+          <div class="code-card" id="about-code-card">
+            <div class="code-card-header">
+              <span class="code-dot red"></span>
+              <span class="code-dot yellow"></span>
+              <span class="code-dot green"></span>
+              <span class="code-filename">developer.json</span>
+            </div>
+            <pre class="code-content"><code id="code-json">{
+  <span class="code-key">"name"</span>: <span class="code-string">"JeevanMarshal"</span>,
+  <span class="code-key">"role"</span>: <span class="code-string">"Full Stack Developer"</span>,
+  <span class="code-key">"skills"</span>: [
+    <span class="code-string">"Java"</span>, <span class="code-string">"Kotlin"</span>,
+    <span class="code-string">"Node.js"</span>, <span class="code-string">"MySQL"</span>
+  ],
+  <span class="code-key">"passion"</span>: <span class="code-string">"Building solutions"</span>,
+  <span class="code-key">"available"</span>: <span class="code-bool">true</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+      </div>
+      <div class="skills-grid" id="skills-grid">
+
+        <div class="skill-category" id="skill-cat-lang">
+          <h3 class="skill-category-title">
+            <span class="skill-cat-icon">💻</span> Languages
+          </h3>
+          <div class="skill-pills">
+            <div class="skill-pill" data-level="90">
+              <span class="skill-pill-name">Java</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:90%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="80">
+              <span class="skill-pill-name">Kotlin</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:80%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="75">
+              <span class="skill-pill-name">JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:75%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="70">
+              <span class="skill-pill-name">HTML / CSS</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:70%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="65">
+              <span class="skill-pill-name">SQL</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:65%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-cat-frameworks">
+          <h3 class="skill-category-title">
+            <span class="skill-cat-icon">⚙️</span> Frameworks & Tools
+          </h3>
+          <div class="skill-pills">
+            <div class="skill-pill" data-level="85">
+              <span class="skill-pill-name">Android SDK</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:85%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="80">
+              <span class="skill-pill-name">Node.js / Express</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:80%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="75">
+              <span class="skill-pill-name">JSP / Servlets</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:75%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="70">
+              <span class="skill-pill-name">Bootstrap</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:70%"></div>
+              </div>
+            </div>
+            <div class="skill-pill" data-level="75">
+              <span class="skill-pill-name">JDBC / MySQL</span>
+              <div class="skill-bar">
+                <div class="skill-bar-fill" style="--w:75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category" id="skill-cat-concepts">
+          <h3 class="skill-category-title">
+            <span class="skill-cat-icon">🧠</span> Concepts & Domains
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Mining</span>
+            <span class="skill-tag">Association Rule Mining</span>
+            <span class="skill-tag">Apriori Algorithm</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Gemini AI API</span>
+            <span class="skill-tag">MVC Architecture</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">Accessibility Services</span>
+            <span class="skill-tag">Image Processing</span>
+            <span class="skill-tag">MVVM</span>
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Jetpack Compose</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-desc">A collection of projects that showcase my skills across mobile, web, and AI domains.</p>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- Project 1: Focus Guardian -->
+        <article class="project-card featured" id="project-focus-guardian">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <div class="project-tag-row">
+              <span class="project-tag tag-android">Android</span>
+              <span class="project-tag tag-ai">AI-Powered</span>
+              <span class="project-featured-badge">⭐ Featured</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link-icon" id="proj1-github" title="View GitHub"
+                aria-label="View Focus Guardian on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-icon-large">🎯</div>
+          <h3 class="project-title">Focus Guardian</h3>
+          <p class="project-desc">
+            A native Android productivity app that monitors app usage in real-time using Android Accessibility Services.
+            Features a 3-stage alert system (Gentle → Reminder → Strict Blocking), YouTube Shorts/Instagram Reels
+            detection,
+            and an AI-powered Insights Engine using <strong>Google Gemini API</strong> to generate adaptive focus tips.
+          </p>
+          <div class="project-features">
+            <div class="project-feature">✅ Real-time App Usage Monitoring</div>
+            <div class="project-feature">✅ 3-Stage Smart Alert System</div>
+            <div class="project-feature">✅ Gemini AI Insights Engine</div>
+            <div class="project-feature">✅ Shorts & Reels Blocking</div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Kotlin</span>
+            <span class="tech-badge">Android SDK</span>
+            <span class="tech-badge">Jetpack Compose</span>
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">Gemini AI</span>
+            <span class="tech-badge">MVVM</span>
+          </div>
+        </article>
+
+        <!-- Project 2: Item Prediction System -->
+        <article class="project-card" id="project-item-prediction">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <div class="project-tag-row">
+              <span class="project-tag tag-java">Java</span>
+              <span class="project-tag tag-ml">Data Mining</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link-icon" id="proj2-github" title="View GitHub"
+                aria-label="View Item Prediction on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-icon-large">🔗</div>
+          <h3 class="project-title">Metadata-Based Item Prediction</h3>
+          <p class="project-desc">
+            A web-based recommendation system that dynamically mines association rules from user transaction history
+            using the <strong>Apriori Algorithm</strong>. Predicts items users are likely to purchase based on
+            metadata, support, confidence, and lift metrics.
+          </p>
+          <div class="project-features">
+            <div class="project-feature">✅ Apriori Algorithm Implementation</div>
+            <div class="project-feature">✅ User Authentication & Registration</div>
+            <div class="project-feature">✅ Real-time Recommendations</div>
+            <div class="project-feature">✅ Cart & Purchase Simulation</div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">JSP</span>
+            <span class="tech-badge">Servlets</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">JDBC</span>
+            <span class="tech-badge">Bootstrap</span>
+          </div>
+        </article>
+
+        <!-- Project 3: Image Processor -->
+        <article class="project-card" id="project-image-processor">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <div class="project-tag-row">
+              <span class="project-tag tag-java">Java</span>
+              <span class="project-tag tag-web">Web App</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link-icon" id="proj3-github" title="View GitHub"
+                aria-label="View Image Processor on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-icon-large">🖼️</div>
+          <h3 class="project-title">Anti-Gravity Image Processor</h3>
+          <p class="project-desc">
+            A full-featured web application for image processing built with JSP and Java Servlets.
+            Supports uploading, processing, and managing images through a clean gallery interface
+            with multiple processing operations and a scalable MVC architecture.
+          </p>
+          <div class="project-features">
+            <div class="project-feature">✅ Image Upload & Processing Pipeline</div>
+            <div class="project-feature">✅ Gallery Management System</div>
+            <div class="project-feature">✅ MVC Architecture</div>
+            <div class="project-feature">✅ Multi-format Support</div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Java</span>
+            <span class="tech-badge">JSP</span>
+            <span class="tech-badge">Servlets</span>
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">Tomcat</span>
+          </div>
+        </article>
+
+        <!-- Project 4: Focus Guardian Backend -->
+        <article class="project-card" id="project-backend">
+          <div class="project-card-glow"></div>
+          <div class="project-top">
+            <div class="project-tag-row">
+              <span class="project-tag tag-node">Node.js</span>
+              <span class="project-tag tag-ai">AI Backend</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="project-link-icon" id="proj4-github" title="View GitHub"
+                aria-label="View Backend on GitHub">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-icon-large">⚡</div>
+          <h3 class="project-title">AI Insights Engine Backend</h3>
+          <p class="project-desc">
+            A production-grade Node.js backend powering the Focus Guardian app's AI features.
+            Implements a <strong>Usage Analysis Engine</strong>, <strong>AI Insight Generator</strong> via Gemini API,
+            and an <strong>Alert Orchestration Engine</strong> — deployable on Render's free tier.
+          </p>
+          <div class="project-features">
+            <div class="project-feature">✅ Gemini AI Prompt Engineering</div>
+            <div class="project-feature">✅ Usage Analysis & Scoring</div>
+            <div class="project-feature">✅ REST API with Express.js</div>
+            <div class="project-feature">✅ Render.com Deployment Ready</div>
+          </div>
+          <div class="project-tech-stack">
+            <span class="tech-badge">Node.js</span>
+            <span class="tech-badge">Express.js</span>
+            <span class="tech-badge">Gemini API</span>
+            <span class="tech-badge">REST API</span>
+            <span class="tech-badge">Render</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Let's Talk</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-desc">I'm currently open to new opportunities. Feel free to reach out for collaborations, job
+          offers, or just a chat!</p>
+      </div>
+      <div class="contact-grid" id="contact-grid">
+        <div class="contact-info" id="contact-info">
+          <div class="contact-card" id="contact-email-card">
+            <div class="contact-card-icon">📧</div>
+            <div class="contact-card-label">Email</div>
+            <a href="mailto:jeevanmarshal@gmail.com" class="contact-card-value"
+              id="contact-email-link">jeevanmarshal@gmail.com</a>
+          </div>
+          <div class="contact-card" id="contact-github-card">
+            <div class="contact-card-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+                <path
+                  d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+              </svg>
+            </div>
+            <div class="contact-card-label">GitHub</div>
+            <a href="https://github.com/yourusername" class="contact-card-value" id="contact-github-link"
+              target="_blank" rel="noopener">github.com/yourusername</a>
+          </div>
+          <div class="contact-card" id="contact-linkedin-card">
+            <div class="contact-card-icon">👔</div>
+            <div class="contact-card-label">LinkedIn</div>
+            <a href="https://linkedin.com/in/yourprofile" class="contact-card-value" id="contact-linkedin-link"
+              target="_blank" rel="noopener">linkedin.com/in/yourprofile</a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="form-name">Your Name</label>
+            <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="form-email">Your Email</label>
+            <input type="email" id="form-email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="subject" placeholder="Job Opportunity / Collaboration" />
+          </div>
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" name="message" rows="5" placeholder="Hello! I'd like to discuss..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full" id="form-submit-btn">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+          </button>
+          <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
+            ✅ Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#hero" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>Dev<span class="logo-dot">/</span><span class="logo-bracket">&gt;</span>
+        </a>
+        <p class="footer-tagline">Building the future, one commit at a time.</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p id="footer-copyright">© 2026 JeevanMarshal. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/yourusername" id="footer-github" target="_blank" rel="noopener"
+            aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path
+                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/yourprofile" id="footer-linkedin" target="_blank" rel="noopener"
+            aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
