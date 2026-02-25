@@ -37,7 +37,7 @@
         <li><a href="#projects" id="nav-projects" class="nav-link">Projects</a></li>
         <li><a href="#contact" id="nav-contact" class="nav-link">Contact</a></li>
         <li>
-          <a href="resume.pdf" id="nav-resume" class="btn-resume" download>
+          <a href="Jeevan_Marshal_Resume.pdf" id="nav-resume" class="btn-resume" download>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
               <polyline points="7 10 12 15 17 10" />
@@ -60,7 +60,7 @@
       <li><a href="#skills" class="mobile-link" id="mob-skills">Skills</a></li>
       <li><a href="#projects" class="mobile-link" id="mob-projects">Projects</a></li>
       <li><a href="#contact" class="mobile-link" id="mob-contact">Contact</a></li>
-      <li><a href="resume.pdf" class="mobile-link" id="mob-resume" download>Download Resume</a></li>
+      <li><a href="Jeevan_Marshal_Resume.pdf" class="mobile-link" id="mob-resume" download>Download Resume</a></li>
     </ul>
   </div>
 
@@ -95,7 +95,7 @@
       </div>
       <div class="hero-stats" id="hero-stats">
         <div class="stat-item">
-          <span class="stat-number" data-count="4">0</span>
+          <span class="stat-number" data-count="3">0</span>
           <span class="stat-label">Projects</span>
         </div>
         <div class="stat-divider"></div>
@@ -103,11 +103,7 @@
           <span class="stat-number" data-count="8">0</span>
           <span class="stat-label">Technologies</span>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-number" data-count="1">0</span>
-          <span class="stat-label">Year Exp.</span>
-        </div>
+
       </div>
     </div>
 
@@ -117,15 +113,15 @@
         <div class="avatar-ring ring-2"></div>
         <div class="avatar-ring ring-3"></div>
         <div class="avatar-core">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="avatar-svg">
-            <circle cx="100" cy="80" r="40" fill="url(#avatarGrad)" />
-            <ellipse cx="100" cy="155" rx="55" ry="35" fill="url(#avatarGrad)" />
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="avatar-svg"
+            style="width: 100%; height: 100%; border-radius: 50%;">
             <defs>
-              <radialGradient id="avatarGrad" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#a78bfa" />
-                <stop offset="100%" stop-color="#6d28d9" />
-              </radialGradient>
+              <clipPath id="avatarClip">
+                <circle cx="100" cy="100" r="100" />
+              </clipPath>
             </defs>
+            <image href="Jeevan.jpg" x="0" y="0" width="200" height="200" preserveAspectRatio="xMidYMid slice"
+              clip-path="url(#avatarClip)" />
           </svg>
         </div>
         <div class="floating-chip chip-1">
@@ -169,8 +165,7 @@
           <p>
             My journey has taken me from designing recommendation systems with <strong>Apriori algorithms</strong>, to
             building productivity apps that help users
-            maintain focus using <strong>Android's accessibility services</strong>, to creating image processing
-            pipelines on the backend.
+            maintain focus using <strong>Android's accessibility services</strong>.
           </p>
           <p>
             I'm always learning, always building, and always looking for the next challenge that pushes my skills
@@ -354,7 +349,7 @@
               <span class="project-featured-badge">⭐ Featured</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link-icon" id="proj1-github" title="View GitHub"
+              <a href="https://github.com/jeevanmarshal" class="project-link-icon" id="proj1-github" title="View GitHub"
                 aria-label="View Focus Guardian on GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -396,7 +391,7 @@
               <span class="project-tag tag-ml">Data Mining</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link-icon" id="proj2-github" title="View GitHub"
+              <a href="https://github.com/jeevanmarshal" class="project-link-icon" id="proj2-github" title="View GitHub"
                 aria-label="View Item Prediction on GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -428,46 +423,7 @@
           </div>
         </article>
 
-        <!-- Project 3: Image Processor -->
-        <article class="project-card" id="project-image-processor">
-          <div class="project-card-glow"></div>
-          <div class="project-top">
-            <div class="project-tag-row">
-              <span class="project-tag tag-java">Java</span>
-              <span class="project-tag tag-web">Web App</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="project-link-icon" id="proj3-github" title="View GitHub"
-                aria-label="View Image Processor on GitHub">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-          <div class="project-icon-large">🖼️</div>
-          <h3 class="project-title">Anti-Gravity Image Processor</h3>
-          <p class="project-desc">
-            A full-featured web application for image processing built with JSP and Java Servlets.
-            Supports uploading, processing, and managing images through a clean gallery interface
-            with multiple processing operations and a scalable MVC architecture.
-          </p>
-          <div class="project-features">
-            <div class="project-feature">✅ Image Upload & Processing Pipeline</div>
-            <div class="project-feature">✅ Gallery Management System</div>
-            <div class="project-feature">✅ MVC Architecture</div>
-            <div class="project-feature">✅ Multi-format Support</div>
-          </div>
-          <div class="project-tech-stack">
-            <span class="tech-badge">Java</span>
-            <span class="tech-badge">JSP</span>
-            <span class="tech-badge">Servlets</span>
-            <span class="tech-badge">HTML5</span>
-            <span class="tech-badge">CSS3</span>
-            <span class="tech-badge">Tomcat</span>
-          </div>
-        </article>
+
 
         <!-- Project 4: Focus Guardian Backend -->
         <article class="project-card" id="project-backend">
@@ -478,7 +434,7 @@
               <span class="project-tag tag-ai">AI Backend</span>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link-icon" id="proj4-github" title="View GitHub"
+              <a href="https://github.com/jeevanmarshal" class="project-link-icon" id="proj4-github" title="View GitHub"
                 aria-label="View Backend on GitHub">
                 <svg viewBox="0 0 24 24" fill="currentColor">
                   <path
@@ -538,14 +494,14 @@
               </svg>
             </div>
             <div class="contact-card-label">GitHub</div>
-            <a href="https://github.com/yourusername" class="contact-card-value" id="contact-github-link"
-              target="_blank" rel="noopener">github.com/yourusername</a>
+            <a href="https://github.com/jeevanmarshal" class="contact-card-value" id="contact-github-link"
+              target="_blank" rel="noopener">github.com/jeevanmarshal</a>
           </div>
           <div class="contact-card" id="contact-linkedin-card">
             <div class="contact-card-icon">👔</div>
             <div class="contact-card-label">LinkedIn</div>
-            <a href="https://linkedin.com/in/yourprofile" class="contact-card-value" id="contact-linkedin-link"
-              target="_blank" rel="noopener">linkedin.com/in/yourprofile</a>
+            <a href="https://www.linkedin.com/in/jeevanmarshal/" class="contact-card-value" id="contact-linkedin-link"
+              target="_blank" rel="noopener">linkedin.com/in/jeevanmarshal</a>
           </div>
         </div>
 
@@ -595,14 +551,14 @@
       <div class="footer-bottom">
         <p id="footer-copyright">© 2026 JeevanMarshal. All rights reserved.</p>
         <div class="footer-socials">
-          <a href="https://github.com/yourusername" id="footer-github" target="_blank" rel="noopener"
+          <a href="https://github.com/jeevanmarshal" id="footer-github" target="_blank" rel="noopener"
             aria-label="GitHub">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
               <path
                 d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
             </svg>
           </a>
-          <a href="https://linkedin.com/in/yourprofile" id="footer-linkedin" target="_blank" rel="noopener"
+          <a href="https://www.linkedin.com/in/jeevanmarshal/" id="footer-linkedin" target="_blank" rel="noopener"
             aria-label="LinkedIn">
             <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
               <path
