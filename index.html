@@ -11,14 +11,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Boxicons for icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
 </head>
 <body class="bg-dark text-light antialiased selection:bg-primary selection:text-white">
+    <!-- Animated background particles -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-orbs" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
 
     <!-- Navigation -->
     <header class="header" id="header">
         <nav class="nav container">
-            <a href="#" class="nav__logo">JM<span class="text-primary">.</span></a>
+            <a href="#" class="nav__logo">Jeevan Marshal P<span class="text-primary">.</span></a>
             
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
@@ -45,15 +52,23 @@
         <section class="home section" id="home">
             <div class="home__container container grid">
                 <div class="home__content">
-                    <span class="home__subtitle">Hello, I'm</span>
+                    <div class="hero-badge" id="hero-badge">
+                        <span class="pulse-dot"></span>
+                        Available for opportunities
+                    </div>
                     <h1 class="home__title">Jeevan Marshal P</h1>
-                    <h3 class="home__role">Frontend Developer <span class="home__role-sub">| MCA Final Year</span></h3>
+                    
+                    <div class="hero-subtitle-wrapper" id="typewriter-wrapper">
+                        <span class="hero-subtitle-static">I build </span>
+                        <span class="typewriter" id="typewriter-text"></span>
+                        <span class="typewriter-cursor">|</span>
+                    </div>
                     <p class="home__description">
-                        Passionate about crafting fast, responsive, and visually stunning web experiences. I leverage core web technologies to build impactful applications with real-world value.
+                        I am passionate about crafting fast, responsive, and visually stunning web experiences. I leverage core web technologies to build impactful applications with real-world value.
                     </p>
                     <div class="home__buttons">
                         <a href="#projects" class="button button--primary">View My Work</a>
-                        <a href="Jeevan_Marshal_Resume.pdf" download class="button button--outline">
+                        <a href="assets/Jeevan_Marshal_Resume.pdf" download class="button button--outline">
                             Download Resume <i class='bx bx-download'></i>
                         </a>
                     </div>
@@ -65,8 +80,17 @@
                 </div>
                 
                 <div class="home__image">
-                    <div class="home__blob">
-                        <img src="Jeevan.jpg" alt="Jeevan Marshal" class="home__img">
+                    <div class="avatar-container" id="hero-avatar">
+                        <div class="avatar-ring ring-1"></div>
+                        <div class="avatar-ring ring-2"></div>
+                        <div class="avatar-ring ring-3"></div>
+                        <div class="avatar-core">
+                            <img src="assets/Jeevan.jpg" alt="Jeevan Marshal P" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%;">
+                        </div>
+                        <div class="floating-chip chip-1"><span>💻</span> Frontend</div>
+                        <div class="floating-chip chip-2"><span>⚡</span> Fast Web Apps</div>
+                        <div class="floating-chip chip-3"><span>🎨</span> UI/UX</div>
+                        <div class="floating-chip chip-4"><span>📱</span> Responsive</div>
                     </div>
                 </div>
             </div>
@@ -84,7 +108,7 @@
                             I am a driven Frontend Developer and an MCA final-year student from Kumbakonam, Tamil Nadu. I specialize in building robust, interactive web applications using pure HTML, CSS, and JavaScript. 
                         </p>
                         <p class="about__description">
-                            I strongly believe in delivering <strong>real-world impact</strong>. My highlighted project, SmartUzhavan, is actively used by clients to streamline agricultural business management. Furthermore, I embrace modern <strong>AI-assisted development approaches</strong> to accelerate complex problem-solving while maintaining high-quality code standards. Currently, I am expanding my knowledge base by learning Python.
+                            I strongly believe in delivering <strong>real-world impact</strong>. For instance, my flagship project, SmartUzhavan, is actively used by clients to streamline agricultural business management. Furthermore, I embrace modern <strong>AI-assisted development approaches</strong> to accelerate complex problem-solving while maintaining high-quality code standards. Currently, I am expanding my knowledge base by learning Python.
                         </p>
                         
                         <div class="about__info grid">
@@ -175,10 +199,13 @@
                     <!-- Featured Project: SmartUzhavan -->
                     <article class="projects__card projects__card--featured">
                         <div class="projects__badge projects__badge--live">🌱 Live — Real Clients</div>
+                        <div class="projects__img-wrapper">
+                            <img src="assets/Smart uzhavan - thumnail.png" alt="SmartUzhavan Interface" class="projects__img">
+                        </div>
                         <div class="projects__content">
                             <h3 class="projects__title">SmartUzhavan</h3>
                             <p class="projects__description">
-                                A Tamil-first offline agricultural business management app for rural farmers and machinery owners. It replaces paper records with digital billing, income/expense tracking, diesel usage monitoring, and daily wage calculations. Features a mobile-first SPA architecture with role-based access control and unique Bill ID systems. Fully offline capable using LocalStorage.
+                                A Tamil-first offline agricultural business management app for rural farmers and machinery owners. It replaces paper records with digital billing, income/expense tracking, diesel usage monitoring, and daily wage calculations. It features a mobile-first SPA architecture with role-based access control and unique Bill ID systems. Fully offline capable using LocalStorage.
                             </p>
                             <div class="projects__tech">
                                 <span>HTML</span>
@@ -188,7 +215,6 @@
                             </div>
                             <div class="projects__buttons">
                                 <a href="https://github.com/jeevanmarshal/SmartUzhavan" target="_blank" class="button button--small button--outline"><i class='bx bxl-github'></i> Code</a>
-                                <a href="#" class="button button--small button--primary"><i class='bx bx-link-external'></i> Live Demo</a>
                             </div>
                         </div>
                     </article>
@@ -196,10 +222,13 @@
                     <!-- Project: JobCheque -->
                     <article class="projects__card">
                         <div class="projects__badge projects__badge--ai">🤖 AI + ML</div>
+                        <div class="projects__img-wrapper">
+                            <img src="assets/jobcheque_mockup.png" alt="JobCheque Interface" class="projects__img">
+                        </div>
                         <div class="projects__content">
                             <h3 class="projects__title">JobCheque</h3>
                             <p class="projects__description">
-                                AI-based fake job detector targeting Indian job seekers. Provides a Genuine / Suspicious / Fake verdict with an ML confidence score and live domain verification. Developed utilizing an AI-assisted workflow.
+                                An AI-based fake job detector targeting Indian job seekers. It provides a Genuine / Suspicious / Fake verdict with an ML confidence score and live domain verification. Developed utilizing an AI-assisted workflow.
                             </p>
                             <div class="projects__tech">
                                 <span>React.js</span>
@@ -211,17 +240,19 @@
                             </div>
                             <div class="projects__buttons">
                                 <a href="https://github.com/jeevanmarshal/JobCheque-AI_Based_Fake_Job_Detector" target="_blank" class="button button--small button--outline"><i class='bx bxl-github'></i> Code</a>
-                                <a href="#" class="button button--small button--primary"><i class='bx bx-link-external'></i> Live Demo</a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project: FinTrack -->
                     <article class="projects__card">
+                        <div class="projects__img-wrapper">
+                            <img src="assets/fin track - thumnail.png" alt="FinTrack Dashboard Interface" class="projects__img">
+                        </div>
                         <div class="projects__content">
                             <h3 class="projects__title">FinTrack</h3>
                             <p class="projects__description">
-                                A personal finance tracker built entirely from scratch with zero dependencies. Features income and expense logging, category breakdowns, and a visual summary dashboard powered by pure DOM manipulation.
+                                A personal finance tracker built entirely from scratch with zero dependencies. It features income and expense logging, category breakdowns, and a visual summary dashboard powered by pure DOM manipulation.
                             </p>
                             <div class="projects__tech">
                                 <span>Pure HTML5</span>
@@ -230,13 +261,16 @@
                             </div>
                             <div class="projects__buttons">
                                 <a href="https://github.com/jeevanmarshal/Fin-Track" target="_blank" class="button button--small button--outline"><i class='bx bxl-github'></i> Code</a>
-                                <a href="#" class="button button--small button--primary"><i class='bx bx-link-external'></i> Live Demo</a>
+                                <a href="https://fintrack-by-jeevan.vercel.app/" target="_blank" class="button button--small button--primary"><i class='bx bx-link-external'></i> Live Demo</a>
                             </div>
                         </div>
                     </article>
 
                     <!-- Project: Wall Calendar -->
                     <article class="projects__card">
+                        <div class="projects__img-wrapper">
+                            <img src="assets/Wall calender - thumnail.png" alt="Wall Calendar Interface" class="projects__img">
+                        </div>
                         <div class="projects__content">
                             <h3 class="projects__title">Wall Calendar</h3>
                             <p class="projects__description">
@@ -249,6 +283,7 @@
                             </div>
                             <div class="projects__buttons">
                                 <a href="https://github.com/jeevanmarshal/Wall-Calendar" target="_blank" class="button button--small button--outline"><i class='bx bxl-github'></i> Code</a>
+                                <a href="https://wall-calendar-sand.vercel.app/" target="_blank" class="button button--small button--primary"><i class='bx bx-link-external'></i> Live Demo</a>
                             </div>
                         </div>
                     </article>
@@ -311,30 +346,36 @@
         <!-- Contact Section -->
         <section class="contact section" id="contact">
             <div class="container">
-                <h2 class="section__title">Get In Touch</h2>
+                <h2 class="section__title">Get in touch</h2>
                 <span class="section__subtitle">Contact Me</span>
 
                 <div class="contact__container grid">
                     <div class="contact__info">
                         <div class="contact__card">
-                            <i class='bx bx-envelope contact__card-icon'></i>
+                            <i class='bx bx-mail-send contact__card-icon'></i>
                             <h3 class="contact__card-title">Email</h3>
                             <span class="contact__card-data">jeevanmarshal@gmail.com</span>
-                            <a href="mailto:jeevanmarshal@gmail.com" class="contact__button">Write me <i class='bx bx-right-arrow-alt contact__button-icon'></i></a>
+                            <a href="mailto:jeevanmarshal@gmail.com" class="contact__button">
+                                Send an Email <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+                            </a>
                         </div>
 
                         <div class="contact__card">
-                            <i class='bx bx-phone contact__card-icon'></i>
-                            <h3 class="contact__card-title">Phone</h3>
-                            <span class="contact__card-data">+91 9489807685</span>
-                            <a href="tel:+919489807685" class="contact__button">Call me <i class='bx bx-right-arrow-alt contact__button-icon'></i></a>
-                        </div>
-
-                        <div class="contact__card">
-                            <i class='bx bxl-linkedin contact__card-icon'></i>
+                            <i class='bx bxl-linkedin-square contact__card-icon'></i>
                             <h3 class="contact__card-title">LinkedIn</h3>
                             <span class="contact__card-data">Jeevan Marshal P</span>
-                            <a href="https://linkedin.com/in/jeevanmarshal" target="_blank" class="contact__button">Connect <i class='bx bx-right-arrow-alt contact__button-icon'></i></a>
+                            <a href="https://linkedin.com/in/jeevanmarshal" target="_blank" class="contact__button">
+                                Connect <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+                            </a>
+                        </div>
+
+                        <div class="contact__card">
+                            <i class='bx bxl-github contact__card-icon'></i>
+                            <h3 class="contact__card-title">GitHub</h3>
+                            <span class="contact__card-data">jeevanmarshal</span>
+                            <a href="https://github.com/jeevanmarshal" target="_blank" class="contact__button">
+                                View Profile <i class='bx bx-right-arrow-alt contact__button-icon'></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -344,18 +385,20 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container footer__container">
-            <h1 class="footer__title">Jeevan Marshal</h1>
+        <div class="footer__container container">
+            <h1 class="footer__title">Jeevan Marshal P</h1>
+
             <ul class="footer__list">
                 <li><a href="#about" class="footer__link">About</a></li>
                 <li><a href="#projects" class="footer__link">Projects</a></li>
                 <li><a href="#skills" class="footer__link">Skills</a></li>
             </ul>
+
             <div class="footer__social">
                 <a href="https://github.com/jeevanmarshal" target="_blank" class="footer__social-link"><i class='bx bxl-github'></i></a>
                 <a href="https://linkedin.com/in/jeevanmarshal" target="_blank" class="footer__social-link"><i class='bx bxl-linkedin'></i></a>
             </div>
-            <span class="footer__copy">&#169; 2026 Jeevan Marshal. All rights reserved.</span>
+            <span class="footer__copy">&#169; Jeevan Marshal P. All rights reserved.</span>
         </div>
     </footer>
 
@@ -365,6 +408,6 @@
     </a>
 
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
 </body>
 </html>

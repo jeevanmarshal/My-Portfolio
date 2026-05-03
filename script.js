@@ -25,6 +25,14 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
+/* Close menu when scrolling */
+window.addEventListener('scroll', () => {
+    const navMenu = document.getElementById('nav-menu');
+    if (navMenu.classList.contains('show-menu')) {
+        navMenu.classList.remove('show-menu');
+    }
+});
+
 /* =============== CHANGE BACKGROUND HEADER =============== */
 const scrollHeader = () =>{
     const header = document.getElementById('header');
@@ -82,4 +90,59 @@ const observer = new IntersectionObserver((entries, observer) => {
 const projectCards = document.querySelectorAll('.projects__card');
 projectCards.forEach(card => {
     observer.observe(card);
+});
+
+/* =============== TYPEWRITER EFFECT =============== */
+const typewriterEl = document.getElementById('typewriter-text');
+if (typewriterEl) {
+  const phrases = [
+    'Fast Web Apps',
+    'Responsive Interfaces',
+    'Interactive UIs',
+    'Modern Frontends'
+  ];
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typeTimeout;
+
+  function typeWrite() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (!isDeleting) {
+      typewriterEl.textContent = currentPhrase.slice(0, charIndex + 1);
+      charIndex++;
+      if (charIndex === currentPhrase.length) {
+        isDeleting = true;
+        typeTimeout = setTimeout(typeWrite, 2000);
+        return;
+      }
+    } else {
+      typewriterEl.textContent = currentPhrase.slice(0, charIndex - 1);
+      charIndex--;
+      if (charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+    typeTimeout = setTimeout(typeWrite, isDeleting ? 60 : 100);
+  }
+  typeWrite();
+}
+
+/* =============== HERO PARALLAX (subtle) =============== */
+document.addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth - 0.5) * 20;
+  const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+  const avatar = document.getElementById('hero-avatar');
+  if (avatar) {
+    avatar.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+  }
+
+  const chips = document.querySelectorAll('.floating-chip');
+  chips.forEach((chip, i) => {
+    const factor = (i % 2 === 0 ? 1 : -1) * 0.15 * (i + 1);
+    chip.style.transform = `translate(${x * factor}px, ${y * factor}px)`;
+  });
 });
